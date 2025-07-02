@@ -1,4 +1,3 @@
--- TODO
 DROP TABLE IF EXISTS playlists;
 DROP TABLE IF EXISTS playlist_tracks;
 DROP TABLE IF EXISTS tracks;
