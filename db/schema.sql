@@ -13,10 +13,10 @@ CREATE TABLE playlists (
     id serial PRIMARY KEY,
     name text NOT NULL,
     description text NOT NULL
-)
+);
 
 CREATE TABLE playlist_tracks (
     id serial PRIMARY KEY,
     playlist_id integer NOT NULL REFERENCES playlists(id) ON DELETE CASCADE,
     track_id integer NOT NULL REFERENCES tracks(id) ON DELETE CASCADE
-)
+);
