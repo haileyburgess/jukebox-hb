@@ -13,3 +13,12 @@ export async function createPlaylist(name, description) {
   } = await db.query(sql, [name, description]);
   return playlist;
 }
+
+export async function getAllPlaylists() {
+  const sql = `
+      SELECT * 
+      FROM playlists
+      `;
+  const { rows: playlists } = await db.query(sql);
+  return playlists;
+}
